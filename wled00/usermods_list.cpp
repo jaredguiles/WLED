@@ -9,7 +9,7 @@
  * || || ||
  * \/ \/ \/
  */
-#include "stairway-wipe-usermod-v2.h"
+//#include "usermod_v2_example.h"
 #ifdef USERMOD_DALLASTEMPERATURE
 #include "../usermods/Temperature/usermod_temperature.h"
 #endif
@@ -22,7 +22,7 @@ void registerUsermods()
    * || || ||
    * \/ \/ \/
    */
-  usermods.add(new StairwayWipeUsermod());
+  //usermods.add(new MyExampleUsermod());
   #ifdef USERMOD_DALLASTEMPERATURE
   usermods.add(new UsermodTemperature());
   #endif
