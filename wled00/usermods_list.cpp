@@ -1,5 +1,8 @@
+#include <Arduino.h>
 #include "wled.h"
-/*
+
+void startWipe();
+void turnOff();/*
  * Register your v2 usermods here!
  *   (for v1 usermods using just usermod.cpp, you can ignore this file)
  */
@@ -9,11 +12,10 @@
  * || || ||
  * \/ \/ \/
  */
-#include "../usermods/stairway_wipe_basic/stairway-wipe-usermod-v2.h"
 #ifdef USERMOD_DALLASTEMPERATURE
 #include "../usermods/Temperature/usermod_temperature.h"
 #endif
-//#include "usermod_v2_empty.h"
+#include "stairway-wipe-usermod-v2.h"
 
 void registerUsermods()
 {
@@ -22,9 +24,8 @@ void registerUsermods()
    * || || ||
    * \/ \/ \/
    */
-  usermods.add(new StairwayWipeUsermod());
   #ifdef USERMOD_DALLASTEMPERATURE
   usermods.add(new UsermodTemperature());
   #endif
-  //usermods.add(new UsermodRenameMe());
+  usermods.add(new StairwayWipeUsermod());
 }

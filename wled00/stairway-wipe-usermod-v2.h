@@ -53,7 +53,7 @@ class StairwayWipeUsermod : public Usermod {
     } else if (wipeState == 3) { //switch to wipe off
       #ifdef STAIRCASE_WIPE_OFF
       effectCurrent = FX_MODE_COLOR_WIPE;
-      strip.timebase = 360 + (255 - effectSpeed)*75 - millis(); //make sure wipe starts fully lit
+      strip.timebase = 360 + (200 - effectSpeed)*75 - millis(); //make sure wipe starts fully lit
       colorUpdated(NOTIFIER_CALL_MODE_NOTIFICATION);
       wipeState = 4;
       #else
